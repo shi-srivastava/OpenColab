@@ -15,7 +15,10 @@ body
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     position: absolute;
     width: 99vw;
-    height: 10vh;
+    height: 12vh;
+    margin-top: -6.5vh;
+    z-index:400;
+
 }
 .wrapper    
 {
@@ -26,7 +29,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content:space-between;
-    height:10vh;
+    height:12vh;
 }
 nav ul
 {
@@ -73,11 +76,6 @@ nav .name img
     font-weight: normal;
     font-size: 20px;
 }
-/*Search*/
-.search-box{
-    display: none;
-}
-
 
 
 /*Hero*/
@@ -135,4 +133,65 @@ header h1 {
     text-align: center;
     color: #353535;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.search-box {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: right;
+  position: relative;
+  top: 40;
+  z-index: 101;
+  transition: 300ms;
+}
+
+.search-box.active {
+  top: 72px;
+}
+
+.search-box input {
+  background: #fffffa;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 0px 0px 8px 8px;
+
+  font-size: 18px;
+  line-height: 22px;
+  border: 0;
+  padding: 12px 48px;
+}
+
+.search-box input::placeholder {
+  color: #b3b3b3;
+}
+
+/* Search & Close Buttons */
+
+.nav-btn-container {
+  display: flex;
+  position: relative;
+}
+
+.nav-btn-container img {
+  position: absolute;
+}
+
+.nav-btn-container .close-btn {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: 200ms;
+}
+.nav-btn-container .search-btn {
+  pointer-events: auto;
+  transition: 300ms;
+}
+.nav-btn-container.active .search-btn {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+}
+.nav-btn-container.active .close-btn {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
