@@ -92,7 +92,7 @@ nav .name img
     background-image: url("Images/Header.svg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 header {
   display: flex;
