@@ -12,4 +12,4 @@ searchBtn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
     searchBox.classList.remove("active");
     navBtnContainer.classList.remove("active");
-});
+}); 
