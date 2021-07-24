@@ -10,7 +10,6 @@
   "dependencies": {
     "express": "latest",
     "handlebars": "^4.7.7",
-    "jade": "latest",
     "nodemon": "^2.0.12",
     "socket.io": "latest"
   },
